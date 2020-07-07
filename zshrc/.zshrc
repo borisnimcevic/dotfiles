@@ -16,6 +16,7 @@ export TERM=xterm-256color
 alias l="ls --color=auto"
 alias ll="ls -lAh --color=auto"
 alias cls="clear -x"
+alias zzz="systemctl suspend"
 
 # embedded:
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
