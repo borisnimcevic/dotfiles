@@ -8,8 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ---Boris---
 export EDITOR='vim' # vim is default editor
-# Makes vim stay with its colors
-export TERM=xterm-256color
+export TERM=xterm-256color # Makes vim stay with its colors
 
 # ***Personal aliases:
 # generic:
@@ -23,3 +22,5 @@ alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
