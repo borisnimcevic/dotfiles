@@ -59,6 +59,7 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+nnoremap <C-p> :GFiles<CR>
 
 "From Primeagen:
 set tabstop=4 softtabstop=4
@@ -75,13 +76,16 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey 
 
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'     
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
 Plug 'mbbill/undotree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
+Plug 'junegunn/fzf.vim'
 call plug#end()
+
 
 
 colorscheme gruvbox
