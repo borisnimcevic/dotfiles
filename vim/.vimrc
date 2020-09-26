@@ -61,6 +61,9 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 nnoremap <C-p> :GFiles<CR>
 
+"New lines without insert mode:
+nmap <Enter> o<Esc>
+
 "From Primeagen:
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -84,14 +87,50 @@ Plug 'git@github.com:Valloric/YouCompleteMe.git'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
 Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+"Plug 'dense-analysis/ale'
+Plug 'sheerun/vim-polyglot'
+"Plug 'vim-syntastic/syntastic'
+"Plug 'tpope/vim-dispatch'
 call plug#end()
 
-
-
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'medium'
 set background=dark
+let g:gruvbox_contrast_light = 'hard'
+"set background=light
 
 if executable('rg')
     let g:rg_derive_root = 'true'
 endif
 
+if !&scrolloff
+  set scrolloff=1
+endif
+
+" --- vim go (polyglot) settings.
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_auto_sameids = 1
+
+" --- sybtatic settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_c_checkers = ['gcc-make']
