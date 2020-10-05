@@ -1,8 +1,29 @@
 [user]
-	email = borisnimcevic@gmail.com
 	name = Boris Nimcevic 
+	email = borisnimcevic@gmail.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[color "diff"]
+    meta = yellow
+    old = red
+    new = green
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
 [core]
     editor = vim
+
+[push]
+    followTags = true
+    default = current
+
