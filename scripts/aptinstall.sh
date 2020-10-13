@@ -23,6 +23,7 @@ install figlet
 install flex
 install git
 install gperf 
+install lolcat 
 install manpages-dev
 install ninja-build 
 install neovim
