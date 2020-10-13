@@ -8,4 +8,5 @@ cd programs/
 # whatsup
 # discord
 # slack
+# somehow setup esp-idf
 # KiCAD?
