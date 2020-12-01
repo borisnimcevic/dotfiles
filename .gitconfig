@@ -27,3 +27,6 @@
     followTags = true
     default = current
 
+[alias]
+	lol = log --oneline --graph --all
+	b = branch -a -v
