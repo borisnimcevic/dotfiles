@@ -2,7 +2,7 @@
 export ZSH="/home/borisnotes/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
-ZSH_THEME="dstufft"
+ZSH_THEME="dst"
 export UPDATE_ZSH_DAYS=7
 plugins=(git)
 plugins=(zsh-autosuggestions)
@@ -22,6 +22,9 @@ alias open="xdg-open"
 
 # embedded:
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
+alias idffm='idf.py -p /dev/ttyUSB1 flash monitor'
+alias idfm='idf.py -p /dev/ttyUSB1 monitor'
+alias idfb='idf.py build'
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf

@@ -15,12 +15,15 @@ set expandtab
 set smartindent
 set noswapfile
 set nobackup
+" This enables undoing the file even after it was closed.
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set termguicolors
 set noshowmode
 set completeopt=menuone,noinsert,noselect
+" highlight the entire line where the cursor is
+set cursorline
 "set path+=**
 "set cmdheight=2
 
@@ -38,7 +41,6 @@ set laststatus=2
 " backspace over anything.
 set backspace=indent,eol,start
 
-
 " Searching:
 set ignorecase
 set smartcase
@@ -47,9 +49,10 @@ set incsearch
 " 'Q' in normal mode enters Ex mode. You almost never want this.
 nmap Q <Nop> 
 
-
 " Enable mouse support.
 set mouse+=a
+
+let mapleader = " "
 
 " Remaps:
 nmap <Enter> o<Esc>| " new line 
@@ -60,14 +63,23 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'     
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
 Plug 'junegunn/fzf.vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'frazrepo/vim-rainbow'
 Plug 'tpope/vim-commentary'
 Plug 'zxqfl/tabnine-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'preservim/nerdtree' 
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'jiangmiao/auto-pairs'
+" Shows which lines were edited on the side
+Plug 'airblade/vim-gitgutter'
+" Highlight what you've just yanked
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
+
+" NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'medium'
@@ -85,18 +97,17 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" --- vim go (polyglot) settings.
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-let g:go_highlight_function_parameters = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_format_strings = 1
-let g:go_highlight_variable_declarations = 1
-let g:go_auto_sameids = 1
+" Display hidden characters
+set list
+set listchars=tab:▸\ ,eol:¬
+
+" If a line wraps around moving up and down makes doesn't skip the whole line.
+nnoremap j gj
+nnoremap k gk
+
+" Makes copping and pasing from outside the vim easier
+set clipboard=unnamed
+" Sort lines alphabetically
+vnoremap <leader>s :'<,'>!sort -f<CR>
+" Highlight-Yank settings
+let g:highlightedyank_highlight_duration = 300

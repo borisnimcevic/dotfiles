@@ -83,7 +83,6 @@ Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 "Plug 'leafgarland/typescript-vim'
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
 Plug 'junegunn/fzf.vim'
