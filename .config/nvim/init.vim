@@ -33,6 +33,7 @@ endif
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey 
+set signcolumn=yes
 
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
@@ -66,14 +67,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'frazrepo/vim-rainbow'
 Plug 'tpope/vim-commentary'
-Plug 'zxqfl/tabnine-vim'
+"Plug 'zxqfl/tabnine-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree' 
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jiangmiao/auto-pairs'
 " Shows which lines were edited on the side
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 " Highlight what you've just yanked
 Plug 'machakann/vim-highlightedyank'
 call plug#end()
@@ -89,13 +89,6 @@ let g:gruvbox_contrast_light = 'hard'
 
 let g:rainbow_active = 1
 
-" coc setup:
-" enable autocompletion with TAB
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Display hidden characters
 set list
@@ -111,3 +104,15 @@ set clipboard=unnamed
 vnoremap <leader>s :'<,'>!sort -f<CR>
 " Highlight-Yank settings
 let g:highlightedyank_highlight_duration = 300
+
+" coc settings:
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
