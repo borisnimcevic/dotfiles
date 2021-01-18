@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/borisnotes/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 ZSH_THEME="fletcherm"
 export UPDATE_ZSH_DAYS=7
 plugins=(git)
@@ -33,6 +33,7 @@ alias imvim='nvim -O ~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm/main/main.
 # git:
 alias gs='git status' # start imagi dev environment
 alias ga='git add' # start imagi dev environment
+alias gacm='git commit -am' # start imagi dev environment
 alias gcm='git commit -m' # start imagi dev environment
 
 # school:
