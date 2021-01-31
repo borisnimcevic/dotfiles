@@ -1,9 +1,9 @@
 syntax on
-filetype plugin indent on 
+filetype plugin indent on
 
 set exrc
 set nocompatible
-"set guicursor= 
+"set guicursor=
 set number
 set relativenumber
 set nohlsearch
@@ -34,7 +34,7 @@ if !&scrolloff
 endif
 
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey 
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 set signcolumn=yes
 
 " Always show the status line at the bottom, even if you only have one window open.
@@ -50,7 +50,7 @@ set smartcase
 set incsearch
 
 " 'Q' in normal mode enters Ex mode. You almost never want this.
-nmap Q <Nop> 
+nmap Q <Nop>
 
 " Enable mouse support.
 set mouse+=a
@@ -58,13 +58,13 @@ set mouse+=a
 let mapleader = " "
 
 " Remaps:
-nmap <Enter> o<Esc>| " new line 
+nmap <Enter> o<Esc>| " new line
 nnoremap <C-p> :GFiles<CR>| " open fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'     
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'frazrepo/vim-rainbow'
@@ -72,7 +72,7 @@ Plug 'tpope/vim-commentary'
 "Plug 'zxqfl/tabnine-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree' 
+Plug 'preservim/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 " Shows which lines were edited on the side
 " Plug 'airblade/vim-gitgutter'
@@ -82,6 +82,9 @@ call plug#end()
 
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
+
+" Remove all trailing whire spaces
+nnoremap <leader>w :%s/\s\+$//e<CR>
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'medium'
