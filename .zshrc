@@ -18,6 +18,9 @@ alias ll="ls --color=auto"
 alias open="xdg-open"
 alias zzz="systemctl suspend"
 
+# workflow:
+alias py="python3"
+
 # embedded:
 IMAGICHARM="~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm"
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
