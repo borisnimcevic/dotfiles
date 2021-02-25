@@ -78,6 +78,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug 'airblade/vim-gitgutter'
 " Highlight what you've just yanked
 Plug 'machakann/vim-highlightedyank'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 " NERDTree
@@ -86,10 +87,12 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " Remove all trailing whire spaces
 nnoremap <leader>w :%s/\s\+$//e<CR>
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'medium'
-set background=dark
-let g:gruvbox_contrast_light = 'hard'
+colorscheme codedark
+let g:airline_theme = 'codedark'
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'medium'
+" set background=dark
+" let g:gruvbox_contrast_light = 'hard'
 "set background=light
 
 let g:rainbow_active = 1
