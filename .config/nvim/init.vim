@@ -1,59 +1,8 @@
 syntax on
 filetype plugin indent on
 
-set exrc
-set nocompatible
-"set guicursor=
-set number
-set relativenumber
-set nohlsearch
-set hidden
-set noerrorbells visualbell t_vb=
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set noswapfile
-set nobackup
-" This enables undoing the file even after it was closed.
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
-set termguicolors
-set noshowmode
-set completeopt=menuone,noinsert,noselect
-" highlight the entire line where the cursor is
-set cursorline
-"set path+=**
-"set cmdheight=2
-set updatetime=300
-set shortmess+=c
-
-if !&scrolloff
-  set scrolloff=2
-endif
-
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-set signcolumn=yes
-
-" Always show the status line at the bottom, even if you only have one window open.
-set laststatus=2
-
-" This configuration makes backspace behave more reasonably, in that you can
-" backspace over anything.
-set backspace=indent,eol,start
-
-" Searching:
-set ignorecase
-set smartcase
-set incsearch
-
 " 'Q' in normal mode enters Ex mode. You almost never want this.
 nmap Q <Nop>
-
-" Enable mouse support.
-set mouse+=a
 
 let mapleader = " "
 
@@ -97,17 +46,10 @@ let g:airline_theme = 'codedark'
 
 let g:rainbow_active = 1
 
-
-" Display hidden characters
-set list
-set listchars=tab:▸\ ,eol:¬
-
 " If a line wraps around moving up and down makes doesn't skip the whole line.
 nnoremap j gj
 nnoremap k gk
 
-" Makes copping and pasing from outside the vim easier
-set clipboard=unnamed
 " Sort lines alphabetically
 vnoremap <leader>s :'<,'>!sort -f<CR>
 " Highlight-Yank settings
