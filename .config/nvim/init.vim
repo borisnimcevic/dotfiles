@@ -1,13 +1,8 @@
-syntax on
 filetype plugin indent on
-
-" 'Q' in normal mode enters Ex mode. You almost never want this.
-nmap Q <Nop>
 
 let mapleader = " "
 
 " Remaps:
-nmap <Enter> o<Esc>| " new line
 nnoremap <C-p> :GFiles<CR>| " open fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
@@ -33,25 +28,7 @@ call plug#end()
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
-" Remove all trailing whire spaces
-nnoremap <leader>w :%s/\s\+$//e<CR>
 
-colorscheme codedark
-let g:airline_theme = 'codedark'
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = 'medium'
-" set background=dark
-" let g:gruvbox_contrast_light = 'hard'
-"set background=light
-
-let g:rainbow_active = 1
-
-" If a line wraps around moving up and down makes doesn't skip the whole line.
-nnoremap j gj
-nnoremap k gk
-
-" Sort lines alphabetically
-vnoremap <leader>s :'<,'>!sort -f<CR>
 " Highlight-Yank settings
 let g:highlightedyank_highlight_duration = 300
 
@@ -83,18 +60,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
