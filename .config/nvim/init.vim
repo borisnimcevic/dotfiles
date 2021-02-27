@@ -10,10 +10,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'frazrepo/vim-rainbow'
 Plug 'tpope/vim-commentary'
-"Plug 'zxqfl/tabnine-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
@@ -28,31 +26,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 call plug#end()
 
-
-" LSP setup:
-set completeopt=menuone,noinsert,noselect
-lua << EOF
-local on_attach = require'completion'.on_attach 
-require'lspconfig'.clangd.setup{
-    on_attach = on_attach, 
-    root_dir = function() return vim.loop.cwd() end 
-}
-require'lspconfig'.cmake.setup{on_attach=on_attach}
-require'lspconfig'.pyls.setup{on_attach=on_attach}
-require'lspconfig'.vimls.setup{on_attach=on_attach}
-EOF
-
-
-" Clangd specific
-nnoremap <leader>h :ClangdSwitchSourceHeader<CR>
-
-" Scroll throught suggested completions with Tab
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-set shortmess+=c
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-let g:completion_matching_ignore_case = 1
-let g:completion_trigger_on_delete = 1
 
 
 
