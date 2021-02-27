@@ -23,13 +23,16 @@ Plug 'christoomey/vim-tmux-navigator'
 " Highlight what you've just yanked
 Plug 'machakann/vim-highlightedyank'
 Plug 'tomasiser/vim-code-dark'
+" LSP
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 call plug#end()
 
+
 " LSP setup:
-"local on_attach = require'completion'.on_attach 
 set completeopt=menuone,noinsert,noselect
 lua << EOF
+local on_attach = require'completion'.on_attach 
 require'lspconfig'.clangd.setup{
     on_attach = on_attach, 
     root_dir = function() return vim.loop.cwd() end 
@@ -40,11 +43,14 @@ require'lspconfig'.vimls.setup{on_attach=on_attach}
 EOF
 
 
+" Clangd specific
 nnoremap <leader>h :ClangdSwitchSourceHeader<CR>
 
-
-
-
+" Scroll throught suggested completions with Tab
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+set shortmess+=c
+let g:completion_enable_snippet = 'UltiSnips'
 
 
 " NERDTree
