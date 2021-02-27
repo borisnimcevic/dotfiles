@@ -5,8 +5,8 @@ set relativenumber
 set nohlsearch
 set hidden
 set noerrorbells visualbell t_vb=
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2 " all the 2's were 4's
+set shiftwidth=2
 set expandtab
 set smartindent
 set noswapfile
