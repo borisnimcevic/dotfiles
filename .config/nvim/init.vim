@@ -27,11 +27,20 @@ Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 " LSP setup:
+"local on_attach = require'completion'.on_attach 
+set completeopt=menuone,noinsert,noselect
 lua << EOF
-require'lspconfig'.clangd.setup{}
+require'lspconfig'.clangd.setup{
+    on_attach = on_attach, 
+    root_dir = function() return vim.loop.cwd() end 
+}
+require'lspconfig'.cmake.setup{on_attach=on_attach}
+require'lspconfig'.pyls.setup{on_attach=on_attach}
+require'lspconfig'.vimls.setup{on_attach=on_attach}
 EOF
 
 
+nnoremap <leader>h :ClangdSwitchSourceHeader<CR>
 
 
 
