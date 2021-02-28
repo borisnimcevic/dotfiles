@@ -3,18 +3,22 @@ filetype plugin indent on
 let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
+" Colors
 Plug 'morhetz/gruvbox'
+Plug 'tomasiser/vim-code-dark'
+Plug 'frazrepo/vim-rainbow'
+Plug 'itchyny/lightline.vim'
+" Navigation
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'frazrepo/vim-rainbow'
-Plug 'tpope/vim-commentary'
-Plug 'itchyny/lightline.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/nerdtree'
+" Inserting comments
+Plug 'tpope/vim-commentary'
+" Helps with syntax
+Plug 'sheerun/vim-polyglot'
 " Highlight what you've just yanked
 Plug 'machakann/vim-highlightedyank'
-Plug 'tomasiser/vim-code-dark'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
@@ -28,11 +32,6 @@ call plug#end()
 nnoremap <leader>n :NERDTreeToggle<CR>
 " Highlight-Yank settings
 let g:highlightedyank_highlight_duration = 300
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
 " Remaps:
 nnoremap <C-p> :GFiles<CR>| " open fzf
