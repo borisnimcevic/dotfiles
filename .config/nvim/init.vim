@@ -4,14 +4,14 @@ let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
 " Colors
-Plug 'morhetz/gruvbox'
-Plug 'tomasiser/vim-code-dark'
 Plug 'frazrepo/vim-rainbow'
 Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'tomasiser/vim-code-dark'
 " Navigation
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
 " Inserting comments
 Plug 'tpope/vim-commentary'
@@ -22,6 +22,11 @@ Plug 'machakann/vim-highlightedyank'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 "============================================"
@@ -32,8 +37,3 @@ call plug#end()
 nnoremap <leader>n :NERDTreeToggle<CR>
 " Highlight-Yank settings
 let g:highlightedyank_highlight_duration = 300
-
-" Remaps:
-nnoremap <C-p> :GFiles<CR>| " open fzf
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-
