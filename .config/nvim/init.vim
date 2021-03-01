@@ -21,14 +21,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'machakann/vim-highlightedyank'
 " COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" LSP
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
-" Telescope
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-lua/popup.nvim'
-" Plug 'nvim-telescope/telescope-fzy-native.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 "============================================"
@@ -39,5 +31,5 @@ call plug#end()
 nnoremap <leader>n :NERDTreeToggle<CR>
 " Highlight-Yank settings
 let g:highlightedyank_highlight_duration = 300
-
-" nmap <silent> gd <Plug>(coc-definition)
+" Fuzzy find for files under .git document
+nnoremap <C-p> :GFiles<CR>
