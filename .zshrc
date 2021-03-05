@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 DRACULA_DISPLAY_TIME=1
 DRACULA_DISPLAY_CONTEXT=0
 # ---Boris---
-export EDITOR='vim' # vim is default editor
+export EDITOR='nvim' # vim is default editor
 export TERM=xterm-256color # Makes vim stay with its colors
 
 # ***Personal aliases:
@@ -25,31 +25,30 @@ alias zzz="systemctl suspend"
 # workflow:
 alias py="python3"
 alias v="nvim"
+alias ncim=nvim #because I'm lame
 
 # embedded:
 IMAGICHARM="~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm"
+alias b='./build.sh'
+alias game='cd ~/esp/imagiLabs-firmware/game-dev/.'
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
 alias idfb='idf.py build'
 alias idfe='idf.py erase_flash -p /dev/ttyUSB1'
 alias idff='idf.py -p /dev/ttyUSB1 flash'
 alias idffm='idf.py -p /dev/ttyUSB1 flash monitor'
 alias idfm='idf.py -p /dev/ttyUSB1 monitor'
-alias imagi='~/automation/imagi.sh' # start imagi dev environment
+alias imagi='~/automation/imagi.sh'
+alias test='./test.sh'
 # start imagi dev environment
-alias imvim='nvim -O ~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm/main/main.c ~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm/main/main.c'
-alias b='./build.sh' # start imagi dev environment
 
 # git:
-alias gs='git status' # start imagi dev environment
-alias ga='git add' # start imagi dev environment
-alias gacm='git commit -am' # start imagi dev environment
-alias gcm='git commit -m' # start imagi dev environment
+alias gs='git status'
+alias ga='git add'
+alias gacm='git commit -am'
+alias gcm='git commit -m'
 
 # school:
 alias tub='cd ~/school/tub/networked_embedded_systems/.' # start imagi dev environment
-
-# typos:
-alias ncim=nvim #because I'm lame
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf

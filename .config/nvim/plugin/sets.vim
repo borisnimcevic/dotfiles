@@ -1,4 +1,3 @@
-set exrc
 set nocompatible
 set number
 set relativenumber
@@ -19,8 +18,8 @@ set termguicolors
 set noshowmode
 set completeopt=menuone,noinsert,noselect
 " highlight the entire line where the cursor is
-set cursorline
-set updatetime=50
+" set cursorline
+set updatetime=300
 set shortmess+=c
 set colorcolumn=80
 set signcolumn=yes
@@ -47,3 +46,6 @@ set listchars=tab:▸\ ,eol:¬
 set clipboard=unnamed
 " set spell checking language
 set nospell spelllang=en_us
+
+set foldmethod=manual 
+

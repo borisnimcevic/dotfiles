@@ -1,5 +1,11 @@
 filetype plugin indent on
 
+" Allows for project specific .nvimrc
+" It also needs to be in this file to work, unfortunately can't have it
+" in sets.vim
+set exrc
+set secure
+
 let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
@@ -21,6 +27,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'machakann/vim-highlightedyank'
 " COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Debugging
+Plug 'puremourning/vimspector'
 call plug#end()
 
 "============================================"
@@ -33,3 +41,15 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let g:highlightedyank_highlight_duration = 300
 " Fuzzy find for files under .git document
 nnoremap <C-p> :GFiles<CR>
+
+" Used it to debug slow nvim. I am not sure it is completely fixed so I will
+" keep it for now.
+nnoremap <silent> <Leader>y
+             \ : if exists("syntax_on") <BAR>
+             \    syntax off <BAR>
+             \ else <BAR>  
+             \    syntax enable <BAR>
+             \ endif<CR>  
+
+" nnoremap <C-\> :vs<CR> <BAR> :GFiles<CR>
+nnoremap <leader>l :vs<CR> <BAR> :GFiles<CR>
