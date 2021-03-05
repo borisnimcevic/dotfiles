@@ -29,6 +29,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Debugging
 Plug 'puremourning/vimspector'
+" Git
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "============================================"
