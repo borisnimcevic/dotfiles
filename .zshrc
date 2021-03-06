@@ -12,7 +12,7 @@ DRACULA_DISPLAY_TIME=1
 DRACULA_DISPLAY_CONTEXT=0
 # ---Boris---
 export EDITOR='nvim' # vim is default editor
-export TERM=xterm-256color # Makes vim stay with its colors
+# export TERM=xterm-256color # Makes vim stay with its colors
 
 # ***Personal aliases:
 # generic:

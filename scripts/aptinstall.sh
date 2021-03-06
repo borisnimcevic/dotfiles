@@ -34,7 +34,6 @@ install python3-pip
 install python3-setuptools 
 install tldr
 install tmux
+install tree
 install wget
 install zsh
-
-
