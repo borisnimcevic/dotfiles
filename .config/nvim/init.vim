@@ -37,9 +37,12 @@ call plug#end()
 "============================================"
 
 " NERDTree
+let NERDTreeShowHidden=1
 nnoremap <leader>n :NERDTreeToggle<CR>
+
 " Highlight-Yank settings
 let g:highlightedyank_highlight_duration = 300
+
 " Fuzzy find for files under .git document
 nnoremap <C-p> :GFiles<CR>
 
