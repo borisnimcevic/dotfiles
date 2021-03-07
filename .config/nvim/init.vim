@@ -11,7 +11,6 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 " Colors
 Plug 'frazrepo/vim-rainbow'
-Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 " Navigation
@@ -44,14 +43,4 @@ let g:highlightedyank_highlight_duration = 300
 " Fuzzy find for files under .git document
 nnoremap <C-p> :GFiles<CR>
 
-" Used it to debug slow nvim. I am not sure it is completely fixed so I will
-" keep it for now.
-nnoremap <silent> <Leader>y
-             \ : if exists("syntax_on") <BAR>
-             \    syntax off <BAR>
-             \ else <BAR>  
-             \    syntax enable <BAR>
-             \ endif<CR>  
-
-" nnoremap <C-\> :vs<CR> <BAR> :GFiles<CR>
 nnoremap <leader>l :vs<CR> <BAR> :GFiles<CR>
