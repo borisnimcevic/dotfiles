@@ -10,9 +10,10 @@ let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
 " Colors
-Plug 'frazrepo/vim-rainbow'
+" Plug 'frazrepo/vim-rainbow'
 Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
+Plug 'itchyny/lightline.vim'
 " Navigation
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

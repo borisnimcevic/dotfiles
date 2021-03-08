@@ -18,6 +18,7 @@ install-prog clangd
 install-prog curl
 install-prog figlet
 install-prog git
+install-prog lolcat
 install-prog nodejs
 install-prog npm
 install-prog python3.9
@@ -29,7 +30,7 @@ pip3 install neovim
 export PATH="$HOME/.local/bin/:$PATH"
 
 # install language servers
-npm i -g bash-language-server
+sudo npm i -g bash-language-server
 pip3 install cmake-language-server
 
 # get neovim
@@ -66,4 +67,4 @@ nvim --headless +"CocInstall coc-spell-checker" +qa
 nvim --headless +"VimspectorInstall vscode-cpptools" +qa
 
 # reference to @ThePrimeagen
-figlet "coconut  oil  applied" -f small
+figlet "coconut  oil  applied" | lolcat
