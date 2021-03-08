@@ -2,7 +2,7 @@
 colorscheme codedark
 let g:airline_theme = 'codedark'
 
-" Gruv Box:
+" Gruvbox:
 " colorscheme gruvbox
 " let g:gruvbox_contrast_dark = 'medium'
 " set background=dark
@@ -17,3 +17,7 @@ nnoremap <silent> <Leader>y
              \ else <BAR>  
              \    syntax enable <BAR>
              \ endif<CR>  
+
+" Rainbow
+let g:rainbow_active = 0
+nnoremap <leader>r :RainbowToggle<CR>

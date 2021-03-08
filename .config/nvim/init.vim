@@ -10,7 +10,7 @@ let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
 " Colors
-" Plug 'frazrepo/vim-rainbow'
+Plug 'luochen1990/rainbow'
 Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
