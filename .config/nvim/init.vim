@@ -47,4 +47,4 @@ let g:highlightedyank_highlight_duration = 300
 " Fuzzy find for files under .git document
 nnoremap <C-p> :GFiles<CR>
 
-nnoremap <leader>l :vs<CR> <BAR> :GFiles<CR>
+nnoremap <leader>l :vs<CR> <BAR> <C-w>l <BAR> :GFiles<CR>
