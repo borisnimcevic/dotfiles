@@ -66,5 +66,5 @@ nvim --headless +"CocInstall coc-spell-checker" +qa
 # setup vimspector
 nvim --headless +"VimspectorInstall vscode-cpptools" +qa
 
-# reference to @ThePrimeagen
-figlet "coconut  oil  applied" | lolcat
+# so much coconut oil
+figlet "nvim setup done" | lolcat
