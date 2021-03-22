@@ -1,13 +1,13 @@
 " Code Dark:
-colorscheme codedark
+" colorscheme codedark
 let g:airline_theme = 'codedark'
 
 " Gruvbox:
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = 'medium'
-" set background=dark
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'medium'
+set background=dark
 " let g:gruvbox_contrast_light = 'hard'
-"set background=light
+" set background=light
 "
 " Used it to debug slow nvim. I am not sure it is completely fixed so I will
 " keep it for now.

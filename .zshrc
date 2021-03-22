@@ -17,6 +17,7 @@ export EDITOR='nvim' # vim is default editor
 # ***Personal aliases:
 # generic:
 alias cls="clear -x"
+alias cp="cp -rv"
 alias l="ls -lAh --color=auto"
 alias ll="ls --color=auto"
 alias open="xdg-open"
@@ -48,7 +49,7 @@ alias gacm='git commit -am'
 alias gcm='git commit -m'
 
 # school:
-alias tub='cd ~/school/tub/networked_embedded_systems/.' # start imagi dev environment
+alias tub='cd ~/school/tub/networked_embedded_systems/lectures/.' # start imagi dev environment
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
