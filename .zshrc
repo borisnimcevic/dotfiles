@@ -1,7 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="fletcherm"
-ZSH_THEME="dracula"
+# ZSH_THEME="dracula"
+ZSH_THEME="boris_dracula"
 export UPDATE_ZSH_DAYS=7
 plugins=(git)
 plugins=(zsh-autosuggestions)
@@ -15,13 +16,23 @@ export EDITOR='nvim' # vim is default editor
 # export TERM=xterm-256color # Makes vim stay with its colors
 
 # ***Personal aliases:
-# generic:
+##########
+# Generic:
+##########
 alias cls="clear -x"
 alias cp="cp -rv"
-alias l="ls -lAh --color=auto"
 alias ll="ls --color=auto"
+alias l="ls -lAh --color=auto"
+alias mkdir="mkdir -pv"
+alias mv="mv -v"
 alias open="xdg-open"
+alias rm="rm -rv"
 alias zzz="systemctl suspend"
+
+mcd (){
+    mkdir -p $1
+    cd $1
+}
 
 # workflow:
 alias py="python3"
@@ -31,7 +42,7 @@ alias ncim=nvim #because I'm lame
 # embedded:
 IMAGICHARM="~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm"
 alias b='./build.sh'
-alias game='cd ~/esp/imagiLabs-firmware/game-dev/.'
+alias game='cd ~/esp/imagiLabs-firmware/game-hardware/.'
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
 alias idfb='idf.py build'
 alias idfe='idf.py erase_flash -p /dev/ttyUSB1'
@@ -49,7 +60,7 @@ alias gacm='git commit -am'
 alias gcm='git commit -m'
 
 # school:
-alias tub='cd ~/school/tub/networked_embedded_systems/lectures/.' # start imagi dev environment
+alias tub='cd ~/school/tub/wireless_communication_systems/.' # start imagi dev environment
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
