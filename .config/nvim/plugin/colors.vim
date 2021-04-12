@@ -19,5 +19,5 @@ nnoremap <silent> <Leader>y
              \ endif<CR>  
 
 " Rainbow
-let g:rainbow_active = 0
+let g:rainbow_active = 1
 nnoremap <leader>r :RainbowToggle<CR>
