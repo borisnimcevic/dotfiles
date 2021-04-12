@@ -19,6 +19,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
+Plug 'wellle/targets.vim'
 " Inserting comments
 Plug 'tpope/vim-commentary'
 " Helps with syntax
@@ -37,7 +38,8 @@ call plug#end()
 " Setup that didn't require a different file "
 "============================================"
 
-" NERDTree
+" Navigation
+nnoremap <leader>l :vs<CR> <BAR> <C-w>l <BAR> :GFiles<CR>
 let NERDTreeShowHidden=1
 nnoremap <leader>n :NERDTreeToggle<CR>
 
@@ -47,4 +49,3 @@ let g:highlightedyank_highlight_duration = 300
 " Fuzzy find for files under .git document
 nnoremap <C-p> :GFiles<CR>
 
-nnoremap <leader>l :vs<CR> <BAR> <C-w>l <BAR> :GFiles<CR>
