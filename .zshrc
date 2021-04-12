@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="fletcherm"
 # ZSH_THEME="dracula"
-ZSH_THEME="boris_dracula"
+ZSH_THEME="boris"
 export UPDATE_ZSH_DAYS=7
 plugins=(git)
 plugins=(zsh-autosuggestions)
