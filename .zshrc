@@ -41,7 +41,6 @@ alias ncim=nvim #because I'm lame
 
 # embedded:
 IMAGICHARM="~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm"
-alias b='./build.sh'
 alias game='cd ~/esp/imagiLabs-firmware/game-hardware/.'
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
 alias idfb='idf.py build'
@@ -50,8 +49,11 @@ alias idff='idf.py -p /dev/ttyUSB1 flash'
 alias idffm='idf.py -p /dev/ttyUSB1 flash monitor'
 alias idfm='idf.py -p /dev/ttyUSB1 monitor'
 alias imagi='~/automation/imagi.sh'
-alias test='./test.sh'
-# start imagi dev environment
+
+alias build='scripts/build.sh'
+alias configure='scripts/configure.sh'
+alias run='scripts/run.sh'
+alias test='scripts/test.sh'
 
 # git:
 alias gs='git status'
