@@ -48,13 +48,20 @@ alias idfe='idf.py erase_flash -p /dev/ttyUSB1'
 alias idff='idf.py -p /dev/ttyUSB1 flash'
 alias idffm='idf.py -p /dev/ttyUSB1 flash monitor'
 alias idfm='idf.py -p /dev/ttyUSB1 monitor'
-alias imagi='~/automation/imagi.sh'
+# alias imagi='~/automation/imagi.sh'
+alias imagi='cd ~/esp/imagiLabs-firmware/esp-idf-v4.0/imagiCharm/.'
 
 alias build='scripts/build.sh'
 alias configure='scripts/configure.sh'
 alias run='scripts/run.sh'
 alias test='scripts/test.sh'
 
+# esp idf:
+alias makeNewComponentESP='~/automation/makeNewComponentESP.sh'
+
+# cpp:
+alias makeCppProject='~/automation/makeCppProject.sh'
+alias makeNewComponentCpp='~/automation/makeNewComponentCpp.sh'
 # git:
 alias gs='git status'
 alias ga='git add'
@@ -72,7 +79,7 @@ export CPPUTEST_HOME=/home/borisnotes/tools/cpputest/cpputest-3.8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Start tmux on the terminal startup?
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
-fi
+# Start tmux on the terminal startup
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#     tmux attach -t default || tmux new -s default
+# fi
