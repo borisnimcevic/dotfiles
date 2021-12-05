@@ -43,9 +43,16 @@ alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
 alias qt="nvim ~/projects/cpp-practice/quick-test/main.cpp"
 alias ncim=nvim #because I'm lame
-alias info="ls -lah" #because I'm lame
+alias info="ls -lah"
+alias fd="fdfind"
+
 # vim habits
-alias :w="figlet \"lol, wtf?\" | lolcat" #because I'm lame
+alias :w="figlet \"lol, wtf?\" | lolcat"
+alias :q="exit"
+
+# rust:
+alias cb="cargo build"
+alias cr="cargo run"
 
 # embedded:
 alias acli='arduino-cli'
