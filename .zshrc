@@ -6,25 +6,29 @@ ZSH_THEME="boris"
 export UPDATE_ZSH_DAYS=7
 plugins=(chucknorris colored-man-pages colorize command-not-found git zsh-autosuggestions thefuck )
 source $ZSH/oh-my-zsh.sh
+# ZSH_COLORIZE_STYLE="colorful"
 
 # Dracula paramers:
 DRACULA_DISPLAY_TIME=1
 DRACULA_DISPLAY_CONTEXT=0
 # ---Boris---
-export EDITOR='lvim' # vim is default editor
+export EDITOR='nvim' # neovim is default editor
 # export TERM=xterm-256color # Makes vim stay with its colors
 
 # ***Personal aliases:
 ##########
 # Generic:
 ##########
+alias cat="ccat"
 alias cls="clear -x"
 alias cp="cp -rv"
+alias less="cless"
 alias ll="ls --color=auto"
 alias l="ls -lAh --color=auto"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
 alias open="xdg-open"
+alias o="open"
 alias rm="rm -rv"
 alias zzz="systemctl suspend"
 
@@ -74,12 +78,16 @@ alias run='scripts/run.sh'
 alias test='scripts/test.sh'
 IMAGICHARM="~/esp/imagiLabs-firmware/imagiCharm"
 
+# work - temporarly while I work on these projects
+alias wat='~/projects/Watchular/.'
+
 # esp idf:
 alias makeNewComponentESP='~/automation/makeNewComponentESP.sh'
 
 # cpp:
 alias makeCppProject='~/automation/makeCppProject.sh'
 alias makeNewComponentCpp='~/automation/makeNewComponentCpp.sh'
+
 # git:
 alias gs='git status'
 alias ga='git add'
@@ -94,9 +102,6 @@ export IDF_PATH=~/esp/esp-idf
 
 # cpputest
 export CPPUTEST_HOME=/home/borisnotes/tools/cpputest/cpputest-3.8
-
-# fpga tools
-export PATH=/home/borisnotes/projects/fpga/fpga-toolchain/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

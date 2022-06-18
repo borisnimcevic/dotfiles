@@ -1,6 +1,6 @@
 [user]
-	name = Boris Nimcevic 
-	email = borisnimcevic@gmail.com
+  name = Boris Nimcevic 
+  email = borisnimcevic@gmail.com
 
 [color]
     diff = auto
@@ -17,8 +17,8 @@
     old = red
     new = green
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+; [url "git@github.com:"]
+; 	insteadOf = https://github.com/
 
 [core]
     editor = nvim
@@ -28,5 +28,7 @@
     default = current
 
 [alias]
-	lol = log --oneline --graph --all
-	b = branch -a -v
+  lol = log --oneline --graph --all
+  b = branch -a -v
+[credential]
+	helper = store
