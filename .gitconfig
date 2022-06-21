@@ -28,7 +28,10 @@
     default = current
 
 [alias]
-  lol = log --oneline --graph --all
+  a = add
   b = branch -a -v
+  lol = log --oneline --graph --all
+  s = status
+
 [credential]
 	helper = store
