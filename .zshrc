@@ -41,14 +41,14 @@ mcd (){
 chpwd() ls -la
 
 # workflow:
+alias fd="fdfind"
+alias info="ls -lah"
+alias ncim=nvim #because I'm lame
 alias py="python3"
+alias qt="nvim ~/projects/cpp-practice/quick-test/main.cpp"
 alias v="nvim"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
-alias qt="nvim ~/projects/cpp-practice/quick-test/main.cpp"
-alias ncim=nvim #because I'm lame
-alias info="ls -lah"
-alias fd="fdfind"
 
 # vim habits
 alias :w="figlet \"lol, wtf?\" | lolcat"
@@ -93,9 +93,6 @@ alias gs='git status'
 alias ga='git add'
 alias gacm='git commit -am'
 alias gcm='git commit -m'
-
-# school:
-alias tub='cd ~/school/tub/wireless_communication_systems/.' # start imagi dev environment
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
