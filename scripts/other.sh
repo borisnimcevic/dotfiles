@@ -9,8 +9,13 @@ rustup self update
 rustup update stable
 rustup target add thumbv6m-none-eabi
 
-# install these helpful tools:
+# Cargo tools:
+
 # Useful to creating UF2 images for the RP2040 USB Bootloader
 cargo install elf2uf2-rs --locked
+
 # Useful for flashing over the SWD pins using a supported JTAG probe
 cargo install probe-run
+
+# Module visualisation
+cargo instal cargo-modules
