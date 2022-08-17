@@ -57,6 +57,8 @@ alias :q="exit"
 # rust:
 alias cb="cargo build"
 alias cr="cargo run"
+alias cn="~/automation/rust-by-example_new-lesson.sh"
+
 
 # embedded:
 alias acli='arduino-cli'
