@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # This works as a reminder of what needs to be instaleld an done
 # Clean this up and put it into the appropriate place later
 
@@ -18,4 +20,15 @@ cargo install elf2uf2-rs --locked
 cargo install probe-run
 
 # Module visualisation
-cargo instal cargo-modules
+cargo install cargo-modules
+
+# Cargo subcommands to make it easy to use the LLVM tools taht are shipped with the Rust toolchain.
+cargo install cargo-binutils
+rustup component add llvm-tools-preview
+
+# Easily generate cargo projects from templates
+cargo install cargo-generate
+
+# Espressif
+cargo install cargo-esptool
+cargo install ldproxy
