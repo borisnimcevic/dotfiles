@@ -23,12 +23,13 @@ install figlet
 install flex
 install git
 install gperf 
-install lolcat 
-install manpages-dev
-install ninja-build 
-install neovim
+install i3
 install libffi-dev 
 install libssl-dev 
+install lolcat 
+install manpages-dev
+install neovim
+install ninja-build 
 install python 
 install python3-pip 
 install python3-setuptools 
