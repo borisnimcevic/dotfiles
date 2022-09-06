@@ -32,8 +32,16 @@ install-prog curl
 
 # pip3 install neovim
 
-# add /.local/bin/ tothe path if it doesn't exist
+# check if $HOME/.local/bin/ exist
+BINDIR="$HOME/.local/bin"
+if [ -d "$BINDIR"] then
+  echo ".local/bin exist. Great!" 
+else
+  echo ".local/bin does not exits. Let's make it." 
+  mkdir -pv "$HOME/.local/bin"
+fi
 
+# add .local/bin/ tothe path if it doesn't exist
 echo $PATH | grep "/.local/bin" &> /dev/null
 if [ $? -ne 0 ]; then
   echo "Added \"/.local/bin\" to the PATH."
@@ -79,7 +87,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # install packer plugins
-nvim --headless +"PackerClean" +qa
 nvim --headless +"PackerInstall" +qa
 
 echo "nvim setup done!!!"
