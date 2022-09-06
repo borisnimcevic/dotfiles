@@ -22,13 +22,13 @@ export EDITOR='nvim' # neovim is default editor
 alias cat="ccat"
 alias cls="clear -x"
 alias cp="cp -rv"
+alias l="ls -lAh --color=auto"
 alias less="cless"
 alias ll="ls --color=auto"
-alias l="ls -lAh --color=auto"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
+alias o="xdg-open"
 alias open="xdg-open"
-alias o="open"
 alias rm="rm -rv"
 alias zzz="systemctl suspend"
 
@@ -45,22 +45,22 @@ alias fd="fdfind"
 alias info="ls -lah"
 alias ncim=nvim #because I'm lame
 alias py="python3"
-alias qt="nvim ~/projects/cpp-practice/quick-test/main.cpp"
 alias v="nvim"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
 
 # vim habits
-alias :w="figlet \"lol, wtf?\" | lolcat"
 alias :q="exit"
+alias :w="figlet \"lol, wtf?\" | lolcat"
 
 # rust:
 alias cb="cargo build"
-alias cr="cargo run"
 alias cn="~/automation/rust-by-example_new-lesson.sh"
-
+alias cr="cargo run"
 
 # embedded:
+IMAGICHARM="~/esp/imagiLabs-firmware/imagiCharm"
+alias flash_imagi="~/projects/imagiLabs/loop-flash.sh" 
 alias acli='arduino-cli'
 alias b='scripts/build.sh'
 alias br='b ; r'
@@ -78,7 +78,6 @@ alias monitor='scripts/monitor.sh'
 alias r='scripts/run.sh'
 alias run='scripts/run.sh'
 alias test='scripts/test.sh'
-IMAGICHARM="~/esp/imagiLabs-firmware/imagiCharm"
 
 # work - temporarly while I work on these projects
 alias wat='~/projects/Watchular/.'
@@ -91,10 +90,10 @@ alias makeCppProject='~/automation/makeCppProject.sh'
 alias makeNewComponentCpp='~/automation/makeNewComponentCpp.sh'
 
 # git:
-alias gs='git status'
 alias ga='git add'
 alias gacm='git commit -am'
 alias gcm='git commit -m'
+alias gs='git status'
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
