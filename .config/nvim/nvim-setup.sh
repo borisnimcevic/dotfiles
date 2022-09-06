@@ -34,7 +34,7 @@ install-prog curl
 
 # check if $HOME/.local/bin/ exist
 BINDIR="$HOME/.local/bin"
-if [ -d "$BINDIR"] then
+if [ -d "$BINDIR"]; then
   echo ".local/bin exist. Great!" 
 else
   echo ".local/bin does not exits. Let's make it." 
