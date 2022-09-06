@@ -38,7 +38,7 @@ mcd (){
 }
 
 # 'ls' after changing directory
-chpwd() ls -la
+chpwd() ls -lah
 
 # workflow:
 alias bigdir="du -h . | sort -hr | head -n 20"
