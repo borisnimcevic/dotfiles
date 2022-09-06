@@ -1,7 +1,14 @@
 #!/bin/bash
 
 # install prerequisites
-sudo apt update
+# sudo apt update
+
+if [ $USER != "root" ]; then
+	echo "You need to run this script as a root user."
+	echo "Try: sudo ./nvim-setup.sh"
+	exit
+fi
+	
 
 function install-prog {
   # We don't care about the output of this command so we do both, stdout and
@@ -21,7 +28,7 @@ function install-prog {
 }
 
 # install-prog clangd
-install-prog curl
+# install-prog curl
 # install-prog figlet
 # install-prog git
 # install-prog lolcat
@@ -33,21 +40,22 @@ install-prog curl
 # pip3 install neovim
 
 # check if $HOME/.local/bin/ exist
-BINDIR="$HOME/.local/bin"
-if [ -d "$BINDIR"]; then
-  echo ".local/bin exist. Great!" 
+BIN_DIR="/home/$SUDO_USER/.local/bin"
+if [ -d "$BIN_DIR" ]; then
+	echo "$BIN_DIR exist. Great!" 
 else
-  echo ".local/bin does not exits. Let's make it." 
-  mkdir -pv "$HOME/.local/bin"
+	echo "$BIN_DIR does not exits. Let's make it." 
+	mkdir -pv "$BIN_DIR"
+	echo "$BIN_DIR is now created." 
 fi
 
 # add .local/bin/ tothe path if it doesn't exist
 echo $PATH | grep "/.local/bin" &> /dev/null
 if [ $? -ne 0 ]; then
-  echo "Added \"/.local/bin\" to the PATH."
-  export PATH="$HOME/.local/bin/:$PATH"
+  echo "Added $BIN_DIR to the PATH."
+  export PATH="/home/$SUDO_USER/.local/bin:$PATH"
 else
-  echo "\"/.local/bin\" already in the PATH."
+  echo "$BIN_DIR already in the PATH."
 fi
 
 # install language servers
@@ -55,11 +63,12 @@ fi
 # pip3 install cmake-language-server
 
 # download latest stable neovim
-curl -LOf https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+# curl -LOf https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 
 # make it executable with 'nvim'
 chmod u+x nvim.appimage
-sudo mv nvim.appimage .local/bin/nvim
+sudo mv nvim.appimage $HOME/.local/bin/nvim
+echo "moved nvim to .local/bin"
 
 # add it as a main editor
 echo "export EDITOR=\"nvim\"" >> $HOME/.bash_profile
@@ -70,7 +79,7 @@ echo "alias v=\"nvim\"" >> $HOME/.bashrc
 echo "alias v=\"nvim\"" >> $HOME/.zshrc
 
 # symlink nvim configuration
-destination="${HOME}/.config/nvim"
+destination="${HOME}/.config"
 dateString=$(date +%Y-%m-%d-%H%M)
 
 if [ -d "${destination}" ]; then
@@ -79,7 +88,7 @@ if [ -d "${destination}" ]; then
   mv ${destination}{,.${dateString}}
 fi
 
-echo "Creating new symlink: ${HOME}/.config/nvim"
+echo "Creating new symlink: ${HOME}/.config"
 ln -s $(pwd) ${destination}
 
 # get packer
