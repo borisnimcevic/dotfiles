@@ -41,6 +41,7 @@ mcd (){
 chpwd() ls -la
 
 # workflow:
+alias bigdir="du -h . | sort -hr | head -n 20"
 alias fd="fdfind"
 alias info="ls -lah"
 alias ncim=nvim #because I'm lame
