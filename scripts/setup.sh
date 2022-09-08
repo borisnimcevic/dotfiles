@@ -2,6 +2,7 @@
 
 ./symlink.sh
 ./aptinstall.sh
+./nvim-setup.sh
 ./programs.sh
 # ./desktop.sh
 
