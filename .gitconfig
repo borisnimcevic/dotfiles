@@ -1,3 +1,6 @@
+[init]
+  defaultBranch = main
+
 [user]
   name = Boris Nimcevic 
   email = borisnimcevic@gmail.com
@@ -35,3 +38,12 @@
 
 [credential]
 	helper = store
+
+[diff]
+	submodule = log
+
+[submodule]
+	recurse = true
+
+[status]
+	submodulesummary = true
