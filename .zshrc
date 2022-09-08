@@ -19,7 +19,6 @@ export EDITOR='nvim' # neovim is default editor
 ##########
 # Generic:
 ##########
-alias cat="ccat"
 alias cls="clear -x"
 alias cp="cp -rv"
 alias l="ls -lAh --color=auto"
