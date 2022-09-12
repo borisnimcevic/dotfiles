@@ -22,7 +22,6 @@ export EDITOR='nvim' # neovim is default editor
 alias cls="clear -x"
 alias cp="cp -rv"
 alias l="ls -lAh --color=auto"
-alias less="cless"
 alias ll="ls --color=auto"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
