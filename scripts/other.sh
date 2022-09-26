@@ -32,3 +32,15 @@ cargo install cargo-generate
 # Espressif
 cargo install cargo-esptool
 cargo install ldproxy
+
+# Yew
+rustup target add wasm32-unknown-unknown
+cargo install trunk
+
+# Anki
+sudo apt install libxcb-xinerama0
+sudo apt install zstd
+curl -LOf https://github.com/ankitects/anki/releases/download/2.1.54/anki-2.1.54-linux-qt6.tar.zst
+tar xaf anki-2.1.54-linux-qt6.tar.zst
+cd anki-2.1.54-linux-qt6
+sudo ./install.sh
