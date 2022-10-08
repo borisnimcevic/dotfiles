@@ -26,7 +26,7 @@ function linkDotfile {
   fi
 
   echo "Creating new symlink: ${dest}"
-  ln -s ${dotfilesDir}/${1} ${dest}
+  ln -sv ${dotfilesDir}/${1} ${dest}
 }
 
 linkDotfile .vimrc
