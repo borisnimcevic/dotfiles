@@ -33,7 +33,8 @@
 [alias]
   a = add
   b = branch -a -v
-  lol = log --oneline --graph --all
+  ;lol = log --oneline --graph --all --color --abbrev-commit --branches
+  lol="log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
   s = status
 
 [credential]
