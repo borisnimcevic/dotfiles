@@ -29,5 +29,22 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 cd
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+
+
+# NEOVIM
+brew install neovim
+brew install fd
+brew install fzf
+
+
+## Installs
+
 # Communicatoin
 brew install signal
+brew install telegram
+
+
+
+# Other
+brew install tldr
+brew install ripgrep
