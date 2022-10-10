@@ -14,8 +14,16 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
 export UPDATE_ZSH_DAYS=7
-plugins=(colored-man-pages colorize command-not-found git zsh-autosuggestions thefuck )
+plugins=(
+	colored-man-pages 
+	colorize 
+	command-not-found 
+	git 
+	zsh-autosuggestions 
+	thefuck 
+)
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ZSH_COLORIZE_STYLE="colorful"
 
 # Dracula paramers:

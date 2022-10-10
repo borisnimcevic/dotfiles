@@ -20,6 +20,8 @@ brew install tmux
 # Oh my zsh
 # get the powerlevel theme
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+# sintax highlights
+brew install zsh-syntax-highlighting
 
 # Plugins
 brew install thefuck 
