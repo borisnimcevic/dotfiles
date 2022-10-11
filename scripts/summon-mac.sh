@@ -48,3 +48,4 @@ brew install telegram
 # Other
 brew install tldr
 brew install ripgrep
+brew install slack
