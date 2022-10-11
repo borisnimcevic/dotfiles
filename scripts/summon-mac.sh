@@ -36,6 +36,30 @@ brew install neovim
 brew install fd
 brew install fzf
 
+# Espressif
+brew install cmake ninja dfu-util
+
+brew install ccache
+# ==> ccache
+# To install symlinks for compilers that will automatically use
+# ccache, prepend this directory to your PATH:
+#   /opt/homebrew/opt/ccache/libexec
+#
+# If this is an upgrade and you have previously added the symlinks to
+# your PATH, you may need to modify it to the path specified above so
+# it points to the current version.
+#
+# NOTE: ccache can prevent some software from compiling.
+# ALSO NOTE: The brew command, by design, will never use ccache.
+
+mkdir -p ~/esp
+cd ~/esp
+git clone --recursive https://github.com/espressif/esp-idf.git
+
+cd ~/esp/esp-idf
+./install.sh all
+
+. ./export.sh
 
 ## Installs
 
@@ -49,3 +73,4 @@ brew install telegram
 brew install tldr
 brew install ripgrep
 brew install slack
+
