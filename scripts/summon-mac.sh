@@ -70,10 +70,11 @@ brew install telegram
 
 
 # Other
-brew install tldr
+brew install --cask anki
+brew install --cask keybase
+brew install --cask monitorcontrol
+brew install --cask sonic-pi
+brew install --cask whatsapp
 brew install ripgrep
 brew install slack
-brew install --cask keybase
-brew install --cask sonic-pi
-brew install --cask anki
-brew install --cask whatsapp
+brew install tldr
