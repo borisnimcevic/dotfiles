@@ -61,6 +61,25 @@ cd ~/esp/esp-idf
 
 . ./export.sh
 
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup toolchain install nightly
+rustup default nightly
+
+# export LIBCLANG_PATH="/Users/borisnimcevic/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-aarch64-apple-darwin/lib/"
+# export PATH="/Users/borisnimcevic/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:/Users/borisnimcevic/.espressif/tools/xtensa-esp32s2-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:/Users/borisnimcevic/.espressif/tools/xtensa-esp32s3-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:$PATH"
+ # If you want to activate the ESP-RS environment in every terminal session automatically, you can add the previous commands to "/Users/borisnimcevic/.zshrc"
+ # However, it is not recommended, as doing so activates  ESP-RS virtual environment in every terminal session (including those where  ESP-RS is not needed), defeating the purpose of the virtual environment and likely affecting other software.
+ # The recommended approach is to source the export file: ". export-esp.sh"
+ # Note: This should be done in every terminal session.
+
+cargo install ldproxy
+cargo install cargo-espflash
+cargo install espflash
+cargo install cargo-espmonitor
+cargo install espmonitor
+cargo install cargo-generate
+
 ## Installs
 
 # Communicatoin
@@ -68,13 +87,15 @@ brew install signal
 brew install telegram
 
 
-
 # Other
 brew install --cask anki
+brew install --cask arduino
 brew install --cask keybase
+brew install --cask kicad
 brew install --cask monitorcontrol
 brew install --cask sonic-pi
 brew install --cask whatsapp
+brew install arduino-cli
 brew install ripgrep
 brew install slack
 brew install tldr
