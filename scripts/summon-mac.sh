@@ -35,6 +35,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew install neovim
 brew install fd
 brew install fzf
+brew install lua-language-server
 
 # Espressif
 brew install cmake ninja dfu-util
@@ -90,6 +91,7 @@ brew install telegram
 # Other
 brew install --cask anki
 brew install --cask arduino
+brew install --cask discord
 brew install --cask keybase
 brew install --cask kicad
 brew install --cask monitorcontrol
