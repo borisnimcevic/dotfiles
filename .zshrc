@@ -43,8 +43,9 @@ alias l="ls -lAh --color=auto"
 alias ll="ls --color=auto"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
-alias o="xdg-open"
-alias open="xdg-open"
+alias o="open"
+# alias o="xdg-open" # uncomment for linux
+# alias open="xdg-open" # uncomment for linux
 alias rm="rm -rv"
 alias zzz="systemctl suspend"
 
@@ -65,6 +66,7 @@ alias py="python3"
 alias v="nvim"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
+alias update="source ~/.zshrc"
 
 # vim habits
 alias :q="exit"
@@ -78,7 +80,6 @@ alias cr="cargo run"
 # embedded:
 IMAGICHARM="~/esp/imagiLabs-firmware/imagiCharm"
 alias flash_imagi="~/projects/imagiLabs/loop-flash.sh" 
-alias acli='arduino-cli'
 alias b='scripts/build.sh'
 alias br='b ; r'
 alias build='scripts/build.sh'
@@ -99,6 +100,9 @@ alias test='scripts/test.sh'
 # work - temporarly while I work on these projects
 alias wat='~/projects/Watchular/.'
 
+# arduino-cli:
+alias acli='arduino-cli'
+
 # esp idf:
 alias makeNewComponentESP='~/automation/makeNewComponentESP.sh'
 
@@ -111,6 +115,11 @@ alias ga='git add'
 alias gacm='git commit -am'
 alias gcm='git commit -m'
 alias gs='git status'
+
+# Quandify
+alias cm="cd ~/code/firmware/products/cubic-meter"
+alias clean_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
+alias build_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 all -O "
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
