@@ -117,9 +117,10 @@ alias gcm='git commit -m'
 alias gs='git status'
 
 # Quandify
-alias cm="cd ~/code/firmware/products/cubic-meter"
-alias clean_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
 alias build_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 all -O "
+alias clean_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
+alias cm="cd ~/code/firmware/products/cubic-meter"
+alias main="./build/main"
 
 # make a path for IDF_PATH
 export IDF_PATH=~/esp/esp-idf
