@@ -67,6 +67,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup toolchain install nightly
 rustup default nightly
 brew install rust-analyzer
+##  Yew
+rustup target add wasm32-unknown-unknown
+cargo install trunk
 
 # export LIBCLANG_PATH="/Users/borisnimcevic/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-aarch64-apple-darwin/lib/"
 # export PATH="/Users/borisnimcevic/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:/Users/borisnimcevic/.espressif/tools/xtensa-esp32s2-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:/Users/borisnimcevic/.espressif/tools/xtensa-esp32s3-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:$PATH"
@@ -76,6 +79,7 @@ brew install rust-analyzer
  # Note: This should be done in every terminal session.
 
 cargo install ldproxy
+cargo install espup
 cargo install cargo-espflash
 cargo install espflash
 cargo install cargo-espmonitor
@@ -93,12 +97,14 @@ brew install telegram
 brew install --cask anki
 brew install --cask arduino
 brew install --cask discord
+brew install --cask docker
 brew install --cask keybase
 brew install --cask kicad
 brew install --cask monitorcontrol
 brew install --cask sonic-pi
 brew install --cask whatsapp
 brew install arduino-cli
+brew install llvm
 brew install ripgrep
 brew install slack
 brew install tldr
