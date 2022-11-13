@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 
 # Brew setup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -102,6 +103,7 @@ brew install --cask keybase
 brew install --cask kicad
 brew install --cask monitorcontrol
 brew install --cask sonic-pi
+brew install --cask ultimaker-cura
 brew install --cask whatsapp
 brew install arduino-cli
 brew install llvm
