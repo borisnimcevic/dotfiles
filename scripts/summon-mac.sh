@@ -106,6 +106,7 @@ brew install --cask sonic-pi
 brew install --cask ultimaker-cura
 brew install --cask whatsapp
 brew install arduino-cli
+brew install broot
 brew install fd
 brew install llvm
 brew install ripgrep
