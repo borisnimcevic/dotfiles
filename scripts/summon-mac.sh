@@ -99,6 +99,7 @@ brew install --cask anki
 brew install --cask arduino
 brew install --cask discord
 brew install --cask docker
+brew install --cask inkscape
 brew install --cask keybase
 brew install --cask kicad
 brew install --cask monitorcontrol
@@ -109,6 +110,7 @@ brew install arduino-cli
 brew install broot
 brew install fd
 brew install llvm
+brew install node
 brew install ripgrep
 brew install slack
 brew install tldr
