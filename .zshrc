@@ -59,7 +59,7 @@ chpwd() ls -lah
 
 # workflow:
 alias bigdir="du -h . | sort -hr | head -n 20"
-alias fd="fdfind"
+# alias fd="fdfind"
 alias info="ls -lah"
 alias ncim=nvim #because I'm lame
 alias py="python3"
@@ -67,6 +67,8 @@ alias v="nvim"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
 alias update="source ~/.zshrc"
+alias play="cd ~/my_corner/projects/playground/."
+alias pro="cd ~/my_corner/projects/."
 
 # vim habits
 alias :q="exit"
@@ -80,9 +82,9 @@ alias cr="cargo run"
 # embedded:
 IMAGICHARM="~/esp/imagiLabs-firmware/imagiCharm"
 alias flash_imagi="~/projects/imagiLabs/loop-flash.sh" 
-alias b='scripts/build.sh'
-alias br='b ; r'
-alias build='scripts/build.sh'
+# alias b='scripts/build.sh'
+# alias br='b ; r'
+# alias build='scripts/build.sh'
 alias configure='scripts/configure.sh'
 alias game='cd ~/esp/imagiLabs-firmware/game-hardware/.'
 alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
@@ -93,9 +95,9 @@ alias idffm='idf.py flash monitor'
 alias idfm='idf.py monitor'
 alias imagi='cd ~/esp/imagiLabs-firmware/imagiCharm/.'
 alias monitor='scripts/monitor.sh'
-alias r='scripts/run.sh'
-alias run='scripts/run.sh'
-alias test='scripts/test.sh'
+# alias r='scripts/run.sh'
+# alias run='scripts/run.sh'
+# alias test='scripts/test.sh'
 
 # work - temporarly while I work on these projects
 alias wat='~/projects/Watchular/.'
@@ -141,3 +143,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /Users/borisnimcevic/.config/broot/launcher/bash/br
