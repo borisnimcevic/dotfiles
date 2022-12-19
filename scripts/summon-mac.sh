@@ -109,7 +109,9 @@ brew install --cask whatsapp
 brew install arduino-cli
 brew install broot
 brew install fd
+brew install figlet
 brew install llvm
+brew install lolcat
 brew install node
 brew install ripgrep
 brew install slack
