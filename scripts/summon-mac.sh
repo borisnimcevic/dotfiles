@@ -97,6 +97,7 @@ brew install telegram
 # Other
 brew install --cask anki
 brew install --cask arduino
+brew install --cask coolterm
 brew install --cask discord
 brew install --cask docker
 brew install --cask inkscape
