@@ -5,6 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# update_prompt() {
+#   NUM=$(cat /Users/borisnimcevic/quandify/labday/2023/chatgpt-metro/a.txt)
+#   echo "%n - %{$fg[green]%}Leave in $NUM min.%{$reset_color%}%\> "
+# }
+
+# NUM=$(cat /Users/borisnimcevic/quandify/labday/2023/chatgpt-metro/a.txt)
+# PS1='$(update_prompt)'
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="fletcherm"
@@ -32,11 +40,17 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ---Boris---
 export EDITOR='nvim' # neovim is default editor
 # export TERM=xterm-256color # Makes vim stay with its colors
+export MDK='/Users/borisnimcevic/my_corner/projects/mdk'    # Points to MDK directory
+export ARCH='esp32c3'         # Valid choices: esp32 esp32c3
+export PORT='/dev/tty.usbmodem1101'    # Serial port for flashing
+# export PORT='/dev/tty.usbserial-110'    # Serial port for flashing
 
 # ***Personal aliases:
 ##########
 # Generic:
 ##########
+# alias o="xdg-open" # uncomment for linux
+# alias open="xdg-open" # uncomment for linux
 alias cls="clear -x"
 alias cp="cp -rv"
 alias l="ls -lAh --color=auto"
@@ -44,11 +58,29 @@ alias ll="ls --color=auto"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
 alias o="open"
-# alias o="xdg-open" # uncomment for linux
-# alias open="xdg-open" # uncomment for linux
+alias priv='tmux new -s private'
 alias rm="rm -rv"
 alias zzz="systemctl suspend"
 
+# workflow:
+# alias fd="fdfind"
+alias advent="cd ~/my_corner/projects/advent-of-code-2022"
+alias bigdir="du -h . | sort -hr | head -n 20"
+alias down="cd ~/Downloads/."
+alias hetzner='ssh -i ~/.ssh/id_rsa-hetzner root@65.108.88.167'
+alias info="ls -lah"
+alias ncim=nvim #because I'm lame
+alias play="cd ~/my_corner/projects/playground/."
+alias pro="cd ~/my_corner/projects/."
+alias py="python3"
+alias python="python3"
+alias update="source ~/.zshrc"
+alias v="nvim"
+alias vrc="nvim ~/.config/nvim/init.lua"
+alias zrc="nvim ~/.zshrc"
+
+# functions
+# make a directory and switch into it
 mcd (){
     mkdir -p $1
     cd $1
@@ -56,19 +88,6 @@ mcd (){
 
 # 'ls' after changing directory
 chpwd() ls -lah
-
-# workflow:
-alias bigdir="du -h . | sort -hr | head -n 20"
-# alias fd="fdfind"
-alias info="ls -lah"
-alias ncim=nvim #because I'm lame
-alias py="python3"
-alias v="nvim"
-alias vrc="nvim ~/.config/nvim/init.lua"
-alias zrc="nvim ~/.zshrc"
-alias update="source ~/.zshrc"
-alias play="cd ~/my_corner/projects/playground/."
-alias pro="cd ~/my_corner/projects/."
 
 # vim habits
 alias :q="exit"
@@ -87,17 +106,21 @@ alias flash_imagi="~/projects/imagiLabs/loop-flash.sh"
 # alias build='scripts/build.sh'
 alias configure='scripts/configure.sh'
 alias game='cd ~/esp/imagiLabs-firmware/game-hardware/.'
-alias get_idf='. $HOME/esp/esp-idf/export.sh' # needed to work with ESP
-alias idfb='idf.py build'
-alias idfe='idf.py erase_flash -p /dev/ttyUSB1'
-alias idff='idf.py flash'
-alias idffm='idf.py flash monitor'
-alias idfm='idf.py monitor'
 alias imagi='cd ~/esp/imagiLabs-firmware/imagiCharm/.'
 alias monitor='scripts/monitor.sh'
 # alias r='scripts/run.sh'
 # alias run='scripts/run.sh'
 # alias test='scripts/test.sh'
+
+##########
+# ESP
+##########
+export IDF_PATH="$HOME/esp/idf_5.0/esp-idf" # set it as a default
+alias get_idf4='export IDF_PATH=$HOME/esp/idf_4.4/esp-idf && . $HOME/esp/idf_4.4/esp-idf/export.sh'
+alias get_idf5='export IDF_PATH=$HOME/esp/idf_5.0/esp-idf && . $HOME/esp/idf_5.0/esp-idf/export.sh'
+
+alias idfb='idf.py build'
+alias idff='idf.py flash'
 
 # work - temporarly while I work on these projects
 alias wat='~/projects/Watchular/.'
@@ -118,14 +141,27 @@ alias gacm='git commit -am'
 alias gcm='git commit -m'
 alias gs='git status'
 
-# Quandify
+##########
+# Quandify 
+##########
 alias build_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 all -O "
 alias clean_msp="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
 alias cm="cd ~/code/firmware/products/cubic-meter"
+alias cs="cd ~/code/firmware/products/cubic-secure"
+alias tool="cd ~/code/cubic-tool"
+alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
 alias main="./build/main"
+alias prp="poetry run pytest" # add "-k" followed by the name of the test to filter that test out, add "-s" if you have a python print statements that you want to print
+alias qmux='tmux new -s quandify'
+alias qt="cd ~/code/firmware-tools/modules/cm-auto-tester" 
+alias syml='fd -H -e yml -E esp-google-iot | xargs rg'
+# alias junk='tmux new-window -n quick-test \; cd ~/Desktop \; split-window -h'
+# alias junk='tmux new-window -n quick-test'
+# alias junk='tmux new-window -n quick-test "cd /Users/borisnimcevic/Desktop/"'
+# alias junk='tmux new-window -n quick-test && cd /Users/borisnimcevic/Desktop/'
 
-# make a path for IDF_PATH
-export IDF_PATH=~/esp/esp-idf
+# other paths 
+# export PATH=/Users/borisnimcevic/my_corner/llvm-project/build/bin:$PATH
 
 # cpputest
 export CPPUTEST_HOME=/home/borisnotes/tools/cpputest/cpputest-3.8
@@ -145,3 +181,10 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /Users/borisnimcevic/.config/broot/launcher/bash/br
+export PATH="/Users/borisnimcevic/.local/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/borisnimcevic/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/borisnimcevic/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/borisnimcevic/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/borisnimcevic/google-cloud-sdk/completion.zsh.inc'; fi
