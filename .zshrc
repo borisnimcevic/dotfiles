@@ -36,7 +36,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ----------------
 # FZF (Fuzzy Finder)
 # ----------------
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $(brew --prefix)/opt/fzf/shell/key-bindings.zsh
 
 # ----------------
 # Node Version Manager (NVM)
