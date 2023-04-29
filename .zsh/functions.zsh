@@ -7,3 +7,6 @@ mcd (){
 # 'ls' after changing directory
 chpwd() ls -lah
 
+cpwd(){
+  pwd | pbcopy
+}
