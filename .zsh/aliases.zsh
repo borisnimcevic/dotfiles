@@ -13,6 +13,7 @@ alias rm="rm -rv"
 alias v="nvim"
 
 # Navigation:
+alias int="cd $HOME/my_corner/projects/intention-board/scale-VR/."
 alias play="cd $HOME/my_corner/projects/playground/."
 alias pro="cd $HOME/my_corner/projects/."
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
@@ -43,6 +44,7 @@ alias get_idf4='export IDF_PATH=$HOME/esp/idf_4.4/esp-idf && . $HOME/esp/idf_4.4
 alias get_idf5='export IDF_PATH=$HOME/esp/idf_5.0/esp-idf && . $HOME/esp/idf_5.0/esp-idf/export.sh'
 alias idfb='idf.py build'
 alias idff='idf.py flash'
+
 # Tests:
 alias tb='cmake --build . --target all'
 alias tr='./cubic-secure-esp32-test'
