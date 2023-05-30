@@ -97,6 +97,7 @@ brew install telegram
 # Other
 brew install --cask anki
 brew install --cask arduino
+brew install --cask bluetility
 brew install --cask coolterm
 brew install --cask discord
 brew install --cask docker
@@ -111,6 +112,7 @@ brew install arduino-cli
 brew install broot
 brew install fd
 brew install figlet
+brew install gcovr
 brew install llvm
 brew install lolcat
 brew install node
@@ -118,4 +120,3 @@ brew install ripgrep
 brew install slack
 brew install tldr
 brew install tree
-brew install --cask bluetility
