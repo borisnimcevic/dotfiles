@@ -23,8 +23,9 @@ plugins=(
 	colorize 
 	command-not-found 
 	git 
-	zsh-autosuggestions 
 	thefuck 
+	zsh-autosuggestions 
+    poetry
 )
 source $ZSH/oh-my-zsh.sh
 
