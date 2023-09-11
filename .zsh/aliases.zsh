@@ -14,20 +14,24 @@ alias v="nvim"
 
 # Navigation:
 alias aliases="cd $HOME/dotfiles/.zsh && v aliases.zsh"
-alias int="cd $HOME/my_corner/projects/intention-board/intention-pad-firmware/."
+# alias int="cd $HOME/my_corner/projects/intention-board/intention-pad-firmware/."
+alias int="cd $HOME/my_corner/projects/intention-board/scale-VR/tusb_hid/."
 alias play="cd $HOME/my_corner/projects/playground/."
 alias pro="cd $HOME/my_corner/projects/."
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
 alias qcs="cd $HOME/code/firmware/products/cubic-secure"
+alias qcse="cd $HOME/code/firmware/products/cubic-secure/esp32"
 alias qct="cd $HOME/code/cubic-tool"
 alias qe="cd $HOME/code/environments"
 alias qft="cd $HOME/code/fimrware-tools"
 alias qhp="cd $HOME/code/hardware-python"
 
 # TMUX:
-alias priv='tmux new -s private'
-alias qmux='tmux new -s quandify'
+alias aq='tmux attach-session -t quandify'
+alias priv='tmux new -s priv'
+alias qmux='tmux new -s quan'
 alias tma='tmux attach-session -t'
+
 
 # Webserver:
 alias hetzner='ssh -i ~/.ssh/id_rsa-hetzner root@65.108.88.167'
