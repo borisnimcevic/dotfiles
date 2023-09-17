@@ -22,7 +22,7 @@ alias qcm="cd $HOME/code/firmware/products/cubic-meter"
 alias qcs="cd $HOME/code/firmware/products/cubic-secure"
 alias qcse="cd $HOME/code/firmware/products/cubic-secure/esp32"
 alias qct="cd $HOME/code/cubic-tool"
-alias qe="cd $HOME/code/environments"
+alias qe="cd $HOME/code/environments/images"
 alias qft="cd $HOME/code/fimrware-tools"
 alias qhp="cd $HOME/code/hardware-python"
 
@@ -31,7 +31,6 @@ alias aq='tmux attach-session -t quandify'
 alias priv='tmux new -s priv'
 alias qmux='tmux new -s quan'
 alias tma='tmux attach-session -t'
-
 
 # Webserver:
 alias hetzner='ssh -i ~/.ssh/id_rsa-hetzner root@65.108.88.167'
@@ -49,8 +48,10 @@ alias msp_clean="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
 alias get_idf4='export IDF_PATH=$HOME/esp/idf_4.4/esp-idf && . $HOME/esp/idf_4.4/esp-idf/export.sh'
 alias get_idf5='export IDF_PATH=$HOME/esp/idf_5.0/esp-idf && . $HOME/esp/idf_5.0/esp-idf/export.sh'
 alias idfb='idf.py build'
+alias idfbon="idf.py build reconfigure -DUSE_NEW_TOPIC=ON"
 alias idff='idf.py flash'
 alias idfm='idf.py monitor'
+
 
 # Tests:
 alias tb='cmake --build . --target all'
@@ -60,7 +61,6 @@ alias tr='./cubic-secure-esp32-test'
 alias update="source ~/.zshrc"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
-
 
 # Other:
 alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
