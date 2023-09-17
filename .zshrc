@@ -26,6 +26,7 @@ plugins=(
 	thefuck 
 	zsh-autosuggestions 
     poetry
+    tmux
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -61,3 +62,15 @@ export PATH="/Users/borisnimcevic/.local/bin:$PATH"
 # ----------------
 if [ -f '/Users/borisnimcevic/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/borisnimcevic/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/borisnimcevic/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/borisnimcevic/google-cloud-sdk/completion.zsh.inc'; fi
+
+# ----------------
+# SonarQube
+# ----------------
+export PATH="/Users/borisnimcevic/sonar/bin:$PATH"
+
+# ----------------
+# Clang
+# ----------------
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/Users/borisnimcevic/my_corner/llvm-project/clang-tools-extra/clang-tidy/tool:$PATH"
+
