@@ -6,9 +6,9 @@ build_window="build"
 directory="$HOME/my_corner/projects/intention-board/scale-VR/tusb_hid"
 
 # Check if the session exists
+# It returns 0 if exist, and non-zero otherwise
 tmux has-session -t $session 2>/dev/null
 
-# $? is a special variable that holds the exit status of the last command executed
 if [ $? != 0 ]; then
     # The session does not exist, create it
     tmux new-session -d -s $session -n $src_window
