@@ -120,3 +120,4 @@ brew install ripgrep
 brew install slack
 brew install tldr
 brew install tree
+brew install wget
