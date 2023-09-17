@@ -14,8 +14,6 @@ alias v="nvim"
 
 # Navigation:
 alias aliases="cd $HOME/dotfiles/.zsh && v aliases.zsh"
-# alias int="cd $HOME/my_corner/projects/intention-board/intention-pad-firmware/."
-alias int="cd $HOME/my_corner/projects/intention-board/scale-VR/tusb_hid/."
 alias play="cd $HOME/my_corner/projects/playground/."
 alias pro="cd $HOME/my_corner/projects/."
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
@@ -52,6 +50,8 @@ alias idfbon="idf.py build reconfigure -DUSE_NEW_TOPIC=ON"
 alias idff='idf.py flash'
 alias idfm='idf.py monitor'
 
+# Alternative Controls:
+alias int="bash $HOME/dotfiles/scripts/intention-tmux.sh"
 
 # Tests:
 alias tb='cmake --build . --target all'
