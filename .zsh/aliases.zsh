@@ -16,18 +16,9 @@ alias v="nvim"
 alias aliases="cd $HOME/dotfiles/.zsh && v aliases.zsh"
 alias play="cd $HOME/my_corner/projects/playground/."
 alias pro="cd $HOME/my_corner/projects/."
-alias qcm="cd $HOME/code/firmware/products/cubic-meter"
-alias qcs="cd $HOME/code/firmware/products/cubic-secure"
-alias qcse="cd $HOME/code/firmware/products/cubic-secure/esp32"
-alias qct="cd $HOME/code/cubic-tool"
-alias qe="cd $HOME/code/environments/images"
-alias qft="cd $HOME/code/fimrware-tools"
-alias qhp="cd $HOME/code/hardware-python"
 
 # TMUX:
-alias aq='tmux attach-session -t quandify'
 alias priv='tmux new -s priv'
-alias qmux='tmux new -s quan'
 alias tma='tmux attach-session -t'
 
 # Webserver:
@@ -53,6 +44,17 @@ alias idfm='idf.py monitor'
 # Alternative Controls:
 alias int="bash $HOME/dotfiles/scripts/intention-tmux.sh"
 
+# Quandify:
+alias qcm="cd $HOME/code/firmware/products/cubic-meter"
+alias qcs="cd $HOME/code/firmware/products/cubic-secure"
+alias qcse="bash $HOME/dotfiles/scripts/cubicsecure-tmux.sh"
+alias qct="cd $HOME/code/cubic-tool"
+alias qe="cd $HOME/code/environments/images"
+alias qft="cd $HOME/code/fimrware-tools"
+alias qhp="cd $HOME/code/hardware-python"
+alias qmux='tmux new -s quan'
+alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
+
 # Tests:
 alias tb='cmake --build . --target all'
 alias tr='./cubic-secure-esp32-test'
@@ -61,9 +63,6 @@ alias tr='./cubic-secure-esp32-test'
 alias update="source ~/.zshrc"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
-
-# Other:
-alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
 
 # TODO: Linux specific, figure out how to detect OS as adjust the settings accordingly 
 # alias o="xdg-open" # uncomment for linux
