@@ -25,8 +25,9 @@ if [ $? != 0 ]; then
     # In the left pane: cd to the project and setup esp-idf
     tmux send-keys -t $session:$build_window.0 "cd $directory" C-m
     tmux send-keys -t $session:$build_window.0 "get_idf4" C-m
-    # In the right pane: cd to the test dir
+    # In the right pane: cd to the test dir and setup esp-idf (needed for testing)
     tmux send-keys -t $session:$build_window.1 "cd $test_dir" C-m
+    tmux send-keys -t $session:$build_window.1 "get_idf4" C-m
 
 fi
 
