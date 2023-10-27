@@ -101,6 +101,7 @@ brew install --cask bluetility
 brew install --cask coolterm
 brew install --cask discord
 brew install --cask docker
+brew install --cask eagle
 brew install --cask inkscape
 brew install --cask keybase
 brew install --cask kicad
