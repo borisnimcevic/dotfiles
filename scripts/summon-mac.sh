@@ -106,6 +106,7 @@ brew install --cask inkscape
 brew install --cask keybase
 brew install --cask kicad
 brew install --cask monitorcontrol
+brew install --cask ngrok
 brew install --cask sonic-pi
 brew install --cask ultimaker-cura
 brew install --cask whatsapp
