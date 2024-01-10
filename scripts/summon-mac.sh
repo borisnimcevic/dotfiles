@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 
 # Brew setup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -29,8 +28,6 @@ brew install thefuck
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 cd
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-
 
 # NEOVIM
 brew install neovim
@@ -93,7 +90,6 @@ cargo install cargo-generate
 brew install signal
 brew install telegram
 
-
 # Other
 brew install --cask anki
 brew install --cask arduino
@@ -107,6 +103,7 @@ brew install --cask keybase
 brew install --cask kicad
 brew install --cask monitorcontrol
 brew install --cask ngrok
+brew install --cask raspberry-pi-imager
 brew install --cask sonic-pi
 brew install --cask ultimaker-cura
 brew install --cask whatsapp
