@@ -1,6 +1,6 @@
 # General:
-alias :q="exit" #vim habit
-alias :w="figlet \"lol, wtf?\" | lolcat" #vim habit
+alias :q="exit" # vim habit
+alias :w="figlet \"lol, wtf?\" | lolcat" # vim habit
 alias bigdir="du -h . | sort -hr | head -n 20"
 alias cls="clear"
 alias cp="cp -rv"
@@ -13,12 +13,15 @@ alias rm="rm -rv"
 alias v="nvim"
 
 # Navigation:
-alias aliases="cd $HOME/dotfiles/.zsh && v aliases.zsh"
+alias aliases="cd $HOME/dotfiles/.zsh && nvim aliases.zsh"
+alias desk="cd $HOME/Desktop/."
+alias down="cd $HOME/Downloads/."
 alias play="cd $HOME/my_corner/projects/playground/."
 alias pro="cd $HOME/my_corner/projects/."
 
 # TMUX:
 alias priv='tmux new -s priv'
+alias tkill="tmux list-panes -F '#P' | grep -v $(tmux display-message -p '#P') | xargs -I {} tmux kill-pane -t {}"
 alias tma='tmux attach-session -t'
 
 # Webserver:
@@ -37,23 +40,24 @@ alias msp_clean="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
 alias get_idf4='export IDF_PATH=$HOME/esp/idf_4.4/esp-idf && . $HOME/esp/idf_4.4/esp-idf/export.sh'
 alias get_idf5='export IDF_PATH=$HOME/esp/idf_5.0/esp-idf && . $HOME/esp/idf_5.0/esp-idf/export.sh'
 alias idfb='idf.py build'
-alias idfbon="idf.py build reconfigure -DUSE_NEW_TOPIC=ON"
 alias idff='idf.py flash'
 alias idfm='idf.py monitor'
 
-# Alternative Controls:
-alias int="bash $HOME/dotfiles/scripts/intention-tmux.sh"
-
 # Quandify:
+alias build="./build.sh"
+alias clean="./clean.sh"
+alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
+alias qcde="cd $HOME/code/firmware/products/cubic-detector/esp32/."
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
 alias qcs="cd $HOME/code/firmware/products/cubic-secure"
-alias qcse="bash $HOME/dotfiles/scripts/cubicsecure-tmux.sh"
-alias qct="cd $HOME/code/cubic-tool"
+alias qcse="cd $HOME/code/firmware/products/cubic-secure/esp32/."
+alias qct="cd $HOME/code/cubic-tool/cubic-tool-fw/."
 alias qe="cd $HOME/code/environments/images"
-alias qft="cd $HOME/code/fimrware-tools"
+alias qft="cd $HOME/code/firmware-tools"
 alias qhp="cd $HOME/code/hardware-python"
 alias qmux='tmux new -s quan'
-alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
+alias run="./run.sh"
+alias tqcse="bash $HOME/dotfiles/scripts/cubicsecure-tmux.sh"
 
 # Tests:
 alias tb='cmake --build . --target all'
