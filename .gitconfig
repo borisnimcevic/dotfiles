@@ -1,9 +1,9 @@
 [init]
-  defaultBranch = main
+    defaultBranch = main
 
 [user]
-  name = Boris Nimcevic 
-  email = borisnimcevic@gmail.com
+    name = Boris Nimcevic 
+    email = boris.nimcevic@gmail.com
 
 [color]
     diff = auto
@@ -50,3 +50,8 @@
 	submodulesummary = true
 [pull]
 	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
