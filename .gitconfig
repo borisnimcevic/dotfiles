@@ -3,7 +3,8 @@
 
 [user]
     name = Boris Nimcevic 
-    email = boris.nimcevic@gmail.com
+    ; email = boris.nimcevic@gmail.com
+    email = boris.nimcevic@quandify.com
 
 [color]
     diff = auto
