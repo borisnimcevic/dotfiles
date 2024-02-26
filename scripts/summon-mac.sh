@@ -112,6 +112,7 @@ brew install broot
 brew install fd
 brew install figlet
 brew install gcovr
+brew install jq
 brew install llvm
 brew install lolcat
 brew install node
