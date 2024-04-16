@@ -69,6 +69,7 @@ alias tb='cmake --build . --target all'
 alias tr='./cubic-secure-esp32-test'
 
 # Dotfiles
+alias dot="cd $HOME/dotfiles"
 alias update="source ~/.zshrc"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
