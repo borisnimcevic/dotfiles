@@ -37,8 +37,9 @@ alias msp_build="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 all -O "
 alias msp_clean="/Applications/ti/ccs1210/ccs/utils/bin/gmake -j 7 clean -O"
 
 # Espressif:
-alias get_idf4='export IDF_PATH=$HOME/esp/idf_4.4/esp-idf && . $HOME/esp/idf_4.4/esp-idf/export.sh'
-alias get_idf5='export IDF_PATH=$HOME/esp/idf_5.0/esp-idf && . $HOME/esp/idf_5.0/esp-idf/export.sh'
+alias get_idf4='export IDF_PATH=$HOME/esp/idf_4.4/esp-idf && . $HOME/esp/idf_4.4/esp-idf/export.sh' # CS,CDet
+alias get_idf5='export IDF_PATH=$HOME/esp/idf_5.0/esp-idf && . $HOME/esp/idf_5.0/esp-idf/export.sh' # CT
+alias get_idf2='export IDF_PATH=$HOME/esp/idf_5.2/esp-idf && . $HOME/esp/idf_5.2/esp-idf/export.sh' # CDot
 alias idfb='idf.py build'
 alias idff='idf.py flash'
 alias idfm='idf.py monitor'
@@ -48,6 +49,7 @@ alias build="./build.sh"
 alias clean="./clean.sh"
 alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
 alias qcde="cd $HOME/code/firmware/products/cubic-detector/esp32/."
+alias qcdot="cd $HOME/code/firmware/products/cubic-dot/esp32/."
 alias qfir="cd $HOME/code/firmware/."
 alias qcdm="cd $HOME/code/firmware/products/cubic-dot/msp-cubic-dot"
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
@@ -60,6 +62,7 @@ alias qhp="cd $HOME/code/hardware-python"
 alias qmux='tmux new -s quan'
 alias run="./run.sh"
 alias tqcse="bash $HOME/dotfiles/scripts/cubicsecure-tmux.sh"
+alias qssh="ssh hil@192.168.1.91"
 
 # Tests:
 alias tb='cmake --build . --target all'
