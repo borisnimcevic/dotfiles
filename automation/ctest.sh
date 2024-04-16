@@ -24,4 +24,5 @@ tmux send-keys "nvim main.c" C-m
 
 # Set up the right pane
 tmux select-pane -t 1
+tmux send-keys "sleep 1" C-m # need to add some delay to make sure the files are coppied
 tmux send-keys "cd $DESTINATION" C-m

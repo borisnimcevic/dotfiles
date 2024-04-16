@@ -74,6 +74,9 @@ alias update="source ~/.zshrc"
 alias vrc="nvim ~/.config/nvim/init.lua"
 alias zrc="nvim ~/.zshrc"
 
+# Development
+alias quickc="bash $HOME/dotfiles/automation/ctest.sh"
+
 # TODO: Linux specific, figure out how to detect OS as adjust the settings accordingly 
 # alias o="xdg-open" # uncomment for linux
 # alias open="xdg-open" # uncomment for linux
