@@ -48,21 +48,22 @@ alias idfm='idf.py monitor'
 alias build="./build.sh"
 alias clean="./clean.sh"
 alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
-alias qcde="cd $HOME/code/firmware/products/cubic-detector/esp32/."
-alias qcdot="cd $HOME/code/firmware/products/cubic-dot/esp32/."
-alias qfir="cd $HOME/code/firmware/."
+alias qcdetesp="cd $HOME/code/firmware/products/cubic-detector/esp32/."
+alias qcdethil="$HOME/code/firmware/products/cubic-detector/hil"
 alias qcdm="cd $HOME/code/firmware/products/cubic-dot/msp-cubic-dot"
+alias qcdot="cd $HOME/code/firmware/products/cubic-dot/esp32/."
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
 alias qcs="cd $HOME/code/firmware/products/cubic-secure"
 alias qcse="cd $HOME/code/firmware/products/cubic-secure/esp32/."
 alias qct="cd $HOME/code/cubic-tool/cubic-tool-fw/."
 alias qe="cd $HOME/code/environments/images"
+alias qfir="cd $HOME/code/firmware/."
 alias qft="cd $HOME/code/firmware-tools"
 alias qhp="cd $HOME/code/hardware-python"
 alias qmux='tmux new -s quan'
+alias qssh="ssh hil@192.168.1.91"
 alias run="./run.sh"
 alias tqcse="bash $HOME/dotfiles/scripts/cubicsecure-tmux.sh"
-alias qssh="ssh hil@192.168.1.91"
 
 # Tests:
 alias tb='cmake --build . --target all'
