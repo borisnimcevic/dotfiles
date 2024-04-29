@@ -77,6 +77,7 @@ alias zrc="nvim ~/.zshrc"
 
 # Development
 alias quickc="bash $HOME/dotfiles/automation/ctest.sh"
+alias quickpy="bash $HOME/dotfiles/automation/pytest.sh"
 
 # TODO: Linux specific, figure out how to detect OS as adjust the settings accordingly 
 # alias o="xdg-open" # uncomment for linux
