@@ -2,8 +2,8 @@
 
 # Brew setup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/borisnimcevic/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/borisnimcevic/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >>/Users/borisnimcevic/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>/Users/borisnimcevic/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # iTerm
@@ -13,7 +13,7 @@ brew install --cask iterm2
 # downlaod fonts and add them to the "Font Book" https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
 
 # Tmux setup
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm    
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install tmux
 # The first time you run tmux install the plugins by running "prefix + I" (that a capital i)
 
@@ -24,7 +24,7 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 brew install zsh-syntax-highlighting
 
 # Plugins
-brew install thefuck 
+brew install thefuck
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 cd
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -71,10 +71,10 @@ cargo install trunk
 
 # export LIBCLANG_PATH="/Users/borisnimcevic/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-aarch64-apple-darwin/lib/"
 # export PATH="/Users/borisnimcevic/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:/Users/borisnimcevic/.espressif/tools/xtensa-esp32s2-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:/Users/borisnimcevic/.espressif/tools/xtensa-esp32s3-elf-gcc/8_4_0-esp-2021r2-patch3-aarch64-apple-darwin/bin/:$PATH"
- # If you want to activate the ESP-RS environment in every terminal session automatically, you can add the previous commands to "/Users/borisnimcevic/.zshrc"
- # However, it is not recommended, as doing so activates  ESP-RS virtual environment in every terminal session (including those where  ESP-RS is not needed), defeating the purpose of the virtual environment and likely affecting other software.
- # The recommended approach is to source the export file: ". export-esp.sh"
- # Note: This should be done in every terminal session.
+# If you want to activate the ESP-RS environment in every terminal session automatically, you can add the previous commands to "/Users/borisnimcevic/.zshrc"
+# However, it is not recommended, as doing so activates  ESP-RS virtual environment in every terminal session (including those where  ESP-RS is not needed), defeating the purpose of the virtual environment and likely affecting other software.
+# The recommended approach is to source the export file: ". export-esp.sh"
+# Note: This should be done in every terminal session.
 
 cargo install ldproxy
 cargo install espup
@@ -94,6 +94,7 @@ brew install telegram
 brew install --cask anki
 brew install --cask arduino
 brew install --cask bluetility
+brew install --cask chatgpt
 brew install --cask coolterm
 brew install --cask discord
 brew install --cask docker
