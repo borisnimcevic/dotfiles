@@ -102,6 +102,7 @@ brew install --cask eagle
 brew install --cask inkscape
 brew install --cask keybase
 brew install --cask kicad
+brew install --cask microsoft-remote-desktop
 brew install --cask monitorcontrol
 brew install --cask ngrok
 brew install --cask raspberry-pi-imager
