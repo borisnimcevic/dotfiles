@@ -13,7 +13,7 @@ alias rm="rm -rv"
 alias v="nvim"
 
 # Navigation:
-alias aliases="cd $HOME/dotfiles/.zsh && nvim aliases.zsh"
+alias aliases="cd $HOME/dotfiles/.zsh && nvim aliases.zsh && cd -"
 alias desk="cd $HOME/Desktop/."
 alias down="cd $HOME/Downloads/."
 alias play="cd $HOME/my_corner/projects/playground/."
@@ -28,6 +28,7 @@ alias tma='tmux attach-session -t'
 alias hetzner='ssh -i ~/.ssh/id_rsa-hetzner root@65.108.88.167'
 
 # Python:
+alias pre="poetry run esp_flasher"
 alias prp="poetry run pytest" # add "-k" followed by the name of the test to filter that test out, add "-s" if you have a python print statements that you want to print
 alias py="python3"
 alias python="python3"
@@ -49,13 +50,14 @@ alias build="./build.sh"
 alias clean="./clean.sh"
 alias lecture="cd /Users/borisnimcevic/quandify/knowledge/unit_testing/course && docker run -it --rm -v $PWD:/lab throwtheswitch/drsurly-course1"
 alias qcdetesp="cd $HOME/code/firmware/products/cubic-detector/esp32/."
-alias qcdethil="$HOME/code/firmware/products/cubic-detector/hil"
+alias qhil="$HOME/code/firmware/products/cubic-detector/hil/esp-controller/esp32s3_hil_controller/"
 alias qcdm="cd $HOME/code/firmware/products/cubic-dot/msp-cubic-dot"
 alias qcdot="cd $HOME/code/cubic-dot-fw/."
 alias qcm="cd $HOME/code/firmware/products/cubic-meter"
 alias qcs="cd $HOME/code/firmware/products/cubic-secure"
 alias qcse="cd $HOME/code/firmware/products/cubic-secure/esp32/."
 alias qct="cd $HOME/code/cubic-tool/cubic-tool-fw/."
+alias qcte="cd $HOME/code/cubic-tool/cubic-tool-fw/esp32/."
 alias qe="cd $HOME/code/environments/images"
 alias qfir="cd $HOME/code/firmware/."
 alias qft="cd $HOME/code/firmware-tools"
